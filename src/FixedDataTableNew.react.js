@@ -154,6 +154,11 @@ var FixedDataTable = React.createClass({
     rowClassNameGetter: PropTypes.func,
 
     /**
+       * Added boolean to determine if the fix for dynamic row heights is necessary
+       */
+    hasDynamicRowHeight: PropTypes.bool,
+
+    /**
      * Pixel height of the column group header.
      */
     groupHeaderHeight: PropTypes.number,
@@ -865,6 +870,14 @@ var FixedDataTable = React.createClass({
         }
       }
       delete this._columnToScrollTo;
+    }
+
+    if(props.hasDynamicRowHeight){
+      //Change for correcting dynamic row height update bug
+      //This forces each row height to recalculate before table height is determined, otherwise it will use stale row heights
+      for(var i=0;i<props.rowsCount;i++){
+        this._scrollHelper.getRowPosition(i);
+      }
     }
 
     var useMaxHeight = props.height === undefined;
