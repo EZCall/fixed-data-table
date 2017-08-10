@@ -154,8 +154,8 @@ var FixedDataTable = React.createClass({
     rowClassNameGetter: PropTypes.func,
 
     /**
-       * Added boolean to determine if the fix for dynamic row heights is necessary
-       */
+     * Added boolean to determine if the fix for dynamic row heights is necessary
+     */
     hasDynamicRowHeight: PropTypes.bool,
 
     /**
