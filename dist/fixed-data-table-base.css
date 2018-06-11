@@ -1,5 +1,5 @@
 /**
- * FixedDataTable v0.6.4 
+ * FixedDataTable v0.6.5 
  *
  * Copyright (c) 2015, Facebook, Inc.
  * All rights reserved.
@@ -21,8 +21,7 @@
  */
 
 .fixedDataTableCellGroupLayout_cellGroup {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   left: 0;
   overflow: hidden;
   position: absolute;
@@ -222,8 +221,7 @@ body[dir="rtl"] .fixedDataTableColumnResizerLineLayout_main {
 }
 
 .fixedDataTableRowLayout_fixedColumnsDivider {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   border-left-style: solid;
   border-left-width: 1px;
   left: 0;

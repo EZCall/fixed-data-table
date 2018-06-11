@@ -17,11 +17,12 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var React = require('./React');
+var createReactClass = require('create-react-class');
 
 var cx = require('./cx');
 var joinClasses = require('./joinClasses');
 
-var PropTypes = React.PropTypes;
+var PropTypes = require('prop-types');
 
 /**
  * Component that handles default cell layout and styling.
@@ -46,9 +47,7 @@ var PropTypes = React.PropTypes;
  * );
  * ```
  */
-var FixedDataTableCellDefault = React.createClass({
-  displayName: 'FixedDataTableCellDefault',
-
+var FixedDataTableCellDefault = createReactClass({
   propTypes: {
 
     /**
